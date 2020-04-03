@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC67CCE32435C8DD0061253D /* HDVideoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67CCE22435C8DD0061253D /* HDVideoDecoder.m */; };
 		FC86C26B24347A45003C9D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C26A24347A45003C9D63 /* AppDelegate.m */; };
 		FC86C26E24347A45003C9D63 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C26D24347A45003C9D63 /* SceneDelegate.m */; };
 		FC86C27124347A45003C9D63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C27024347A45003C9D63 /* ViewController.m */; };
@@ -14,9 +15,14 @@
 		FC86C27624347A48003C9D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC86C27524347A48003C9D63 /* Assets.xcassets */; };
 		FC86C27924347A48003C9D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC86C27724347A48003C9D63 /* LaunchScreen.storyboard */; };
 		FC86C27C24347A48003C9D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C27B24347A48003C9D63 /* main.m */; };
+		FC86C28624347ACA003C9D63 /* TGVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C28524347ACA003C9D63 /* TGVideoCapture.m */; };
+		FC86C28B24347BBA003C9D63 /* HDVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC86C28A24347BBA003C9D63 /* HDVideoEncoder.m */; };
+		FCC82EED243706BE0060AE12 /* TGOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC82EEB243706BE0060AE12 /* TGOpenGLView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC67CCE12435C8DD0061253D /* HDVideoDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDVideoDecoder.h; sourceTree = "<group>"; };
+		FC67CCE22435C8DD0061253D /* HDVideoDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVideoDecoder.m; sourceTree = "<group>"; };
 		FC86C26624347A45003C9D63 /* iOSVideoEncoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSVideoEncoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC86C26924347A45003C9D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC86C26A24347A45003C9D63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +35,12 @@
 		FC86C27824347A48003C9D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC86C27A24347A48003C9D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC86C27B24347A48003C9D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC86C28424347ACA003C9D63 /* TGVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGVideoCapture.h; sourceTree = "<group>"; };
+		FC86C28524347ACA003C9D63 /* TGVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGVideoCapture.m; sourceTree = "<group>"; };
+		FC86C28924347BBA003C9D63 /* HDVideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDVideoEncoder.h; sourceTree = "<group>"; };
+		FC86C28A24347BBA003C9D63 /* HDVideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVideoEncoder.m; sourceTree = "<group>"; };
+		FCC82EEB243706BE0060AE12 /* TGOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGOpenGLView.m; sourceTree = "<group>"; };
+		FCC82EEC243706BE0060AE12 /* TGOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGOpenGLView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC67CCE0243590300061253D /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				FC67CCE12435C8DD0061253D /* HDVideoDecoder.h */,
+				FC67CCE22435C8DD0061253D /* HDVideoDecoder.m */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
 		FC86C25D24347A45003C9D63 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +82,13 @@
 		FC86C26824347A45003C9D63 /* iOSVideoEncoder */ = {
 			isa = PBXGroup;
 			children = (
+				FC67CCE0243590300061253D /* Decoder */,
+				FC86C28824347AFD003C9D63 /* Encoder */,
+				FC86C28324347AB4003C9D63 /* Capture */,
 				FC86C26924347A45003C9D63 /* AppDelegate.h */,
 				FC86C26A24347A45003C9D63 /* AppDelegate.m */,
+				FCC82EEC243706BE0060AE12 /* TGOpenGLView.h */,
+				FCC82EEB243706BE0060AE12 /* TGOpenGLView.m */,
 				FC86C26C24347A45003C9D63 /* SceneDelegate.h */,
 				FC86C26D24347A45003C9D63 /* SceneDelegate.m */,
 				FC86C26F24347A45003C9D63 /* ViewController.h */,
@@ -74,6 +100,24 @@
 				FC86C27B24347A48003C9D63 /* main.m */,
 			);
 			path = iOSVideoEncoder;
+			sourceTree = "<group>";
+		};
+		FC86C28324347AB4003C9D63 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				FC86C28424347ACA003C9D63 /* TGVideoCapture.h */,
+				FC86C28524347ACA003C9D63 /* TGVideoCapture.m */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		FC86C28824347AFD003C9D63 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				FC86C28924347BBA003C9D63 /* HDVideoEncoder.h */,
+				FC86C28A24347BBA003C9D63 /* HDVideoEncoder.m */,
+			);
+			path = Encoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC67CCE32435C8DD0061253D /* HDVideoDecoder.m in Sources */,
+				FC86C28B24347BBA003C9D63 /* HDVideoEncoder.m in Sources */,
 				FC86C27124347A45003C9D63 /* ViewController.m in Sources */,
 				FC86C26B24347A45003C9D63 /* AppDelegate.m in Sources */,
+				FCC82EED243706BE0060AE12 /* TGOpenGLView.m in Sources */,
+				FC86C28624347ACA003C9D63 /* TGVideoCapture.m in Sources */,
 				FC86C27C24347A48003C9D63 /* main.m in Sources */,
 				FC86C26E24347A45003C9D63 /* SceneDelegate.m in Sources */,
 			);
@@ -290,12 +338,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 236VZTXUBW;
 				INFOPLIST_FILE = iOSVideoEncoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSVideoEncoder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanppyba.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,12 +355,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 236VZTXUBW;
 				INFOPLIST_FILE = iOSVideoEncoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSVideoEncoder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hanppyba.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
